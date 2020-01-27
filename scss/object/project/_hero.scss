@@ -1,0 +1,10 @@
+.p-hero {
+  //background-image: url("../../image/the-mona-lisa-gw1280.jp.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+@include sumaho(){
+  width: 100%;
+}
+}

@@ -1,0 +1,68 @@
+.c-category-btn {
+  background: #f6ce72;
+  border-radius: 5px;
+  font-size: 1.6em;
+  font-weight: 500;
+  border: 1px solid #ecb767;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  float: right;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+.l-button--field{
+  display: flex;
+  flex-direction: column;
+  position:fixed;
+  top:200px;
+  right: 30px;
+}
+.c-button--gallery {
+  width: 100px;
+  height: 100px;
+  background: #242727;
+  border: 1px solid #242727;
+  margin-bottom: $space_xl;
+
+  &__small {
+    background: #258c6d;
+    width: calc(40% - #{$space_s});
+    margin-right: 5px;
+    height: calc(40% - #{$space_s});
+    margin-bottom: $space_s;
+    float: left;
+    position: relative;
+    left: 10px;
+  }
+  &__large{
+    background: #258c6d;
+    width: calc( 33% - #{$space_s});
+    margin-right: 5px;
+    height: calc(33% - #{$space_s});
+    margin-bottom: $space_s;
+    float: left;
+    position: relative;
+    left: 4px;
+    top:3px;
+  }
+  &__medium{
+    background: #258c6d;
+    width: calc( 33% - #{$space_s});
+    margin-right: 5px;
+    height: calc(33% - #{$space_s});
+    margin-bottom: $space_s;
+    float: left;
+    position: relative;
+    left: 4px;
+    top:3px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

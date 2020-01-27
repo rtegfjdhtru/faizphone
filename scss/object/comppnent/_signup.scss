@@ -1,0 +1,29 @@
+
+
+.c-signup-form {
+  display: flex;
+  flex-direction: column;
+  &__label {
+    padding-bottom: $space_l;
+  }
+
+  &__text {
+    display: block;
+    width: 100%;
+    &--err{
+      color:white;
+      padding: 10px 20px;
+      background: #a5a5a5;
+      border-radius: 3px;
+    }
+  }
+}
+.c-signup-form--center {
+  margin: 0 auto;
+}
+
+
+.err{
+  background: #ffbbbb;
+  border: 1px solid #ff0012;
+}

@@ -1,0 +1,18 @@
+.p-search--container{
+  position: relative;
+  top: 30px;//高さ
+  &__text{
+    outline:none;
+    background:#eee;
+  }
+  &__btn{
+    height:50px;
+    position:absolute;
+    left:140px;
+    top:-8px;
+    background:none;
+    color:#666;
+    border:none;
+    font-size:20px;/*アイコンサイズ*/
+  }
+}

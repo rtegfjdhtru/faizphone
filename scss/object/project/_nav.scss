@@ -1,0 +1,30 @@
+.p-slide ul {
+  display: flex;
+  flex-direction: row;
+  @include ipad() {
+    width: 100%;
+  }
+
+  @include sumaho() {
+    //display: none;
+    display: flex;
+    flex-direction: column;
+    top: 70px;
+    position: absolute;
+  }
+
+  & li {
+    font-size: $nac-font-size;
+    @include sumaho() {
+      background: #6f737b; //todo あとで変数に
+      padding: 10px 10px;
+    }
+  }
+
+  & li a {
+    margin-right: $space_m;
+    color: white;
+    display: block;
+
+  }
+}

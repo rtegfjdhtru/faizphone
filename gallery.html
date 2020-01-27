@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="サンプルサイト">
+    <meta name="keyword" content="ケーキ,コーヒー,喫茶店">
+    <title>ホーム</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href="fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+</head>
+<body>
+<!--ヘッダー-->
+
+<header class="l-header" id="header">
+    <div class="l-header-container">
+        <!--ここを画像にするか文字にするかは自由　とりあえず直style-->
+        <div class="title_name"><a href="index.html" class="">HPの名前</a></div>
+        <nav class="p-slide" :class="{'p-slide--active':isActive}">
+            <ul class="p-nav" @click="menuClickOut">
+                <li><a href="">TOP</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+
+        <!--ハンバーガ-->
+        <a class="menu-trigger " :class="{'active':isActive}" @click="menuActive">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <!--メニューカバー-->
+    <div class="u-cover" :class="{'u-cover--active':isActive}"></div>
+
+</header>
+
+
+<!--ヒーローヘッダー-->
+<main class="l-main">
+    <div class="l-gallery" id="gallery">
+
+        <div class="l-button--field">
+            <button class="c-button--gallery" @click="imgWidthSmall">
+                <div class="c-button--gallery__small"></div>
+                <div class="c-button--gallery__small"></div>
+                <div class="c-button--gallery__small"></div>
+                <div class="c-button--gallery__small"></div>
+            </button>
+
+            <button class="c-button--gallery" @click="imgWidthMedium">
+                <div class="c-button--gallery__medium"></div>
+                <div class="c-button--gallery__medium"></div>
+                <div class="c-button--gallery__medium"></div>
+                <div class="c-button--gallery__medium"></div>
+                <div class="c-button--gallery__medium"></div>
+                <div class="c-button--gallery__medium"></div>
+            </button>
+
+            <button class="c-button--gallery" @click="imgWidthLarge">
+                <div class="c-button--gallery__large"></div>
+                <div class="c-button--gallery__large"></div>
+                <div class="c-button--gallery__large"></div>
+                <div class="c-button--gallery__large"></div>
+                <div class="c-button--gallery__large"></div>
+                <div class="c-button--gallery__large"></div>
+                <div class="c-button--gallery__large"></div>
+                <div class="c-button--gallery__large"></div>
+                <div class="c-button--gallery__large"></div>
+            </button>
+        </div>
+
+        <div class="l-gallery--container">
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+            <div class=p-gallery-container--panel--body">
+                <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+            </div>
+        </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+            <a href="" class="p-gallery-container--panel" :class="imgWidthClass">
+                <div class=p-gallery-container--panel--body">
+                    <img src="image/autumn-4579561_1280.jpg" alt="ギャラリーの画像">
+                </div>
+            </a>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+<footer class="l-footer" id="footer">
+    © Copyright 2019 テキスト All rights reserved
+</footer>
+
+
+<script src="dist/js/bundle.js"></script>
+</body>
+</html>

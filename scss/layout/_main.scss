@@ -1,0 +1,6 @@
+.l-main {
+  background: $main-background;
+  @include ipad(){
+    padding-top: 60px;
+  }
+}

@@ -1,0 +1,52 @@
+.p-side__menu{
+  height: 100vh;
+  width: 25%;
+  background:$side-nav-background;
+  z-index: 1;
+  position: absolute;
+  transition: .5s;
+  left:-25%;
+  @include media-breakpoint-down(md) {
+    width: 40%;
+    left:-40%;
+  }
+  @include media-breakpoint-down(xs) {
+    left:-100%;
+    width: 100%;
+  }
+  &.active{
+    transition: .5s;
+    transform: translateX(100%);
+    z-index: 2;
+  }
+  &--nav{
+    font-size: 1.5em;
+    &--menu{
+     display: flex;
+      flex-direction: column;
+      &--item{
+        padding-left: $space_l;
+        padding-top: $space_m;
+        padding-bottom: $space_m;
+        margin-top: $space_l;
+      }
+      &--item:hover{
+        background: #c7c7c7;//TODO あとで変数にする
+        cursor : pointer;
+      }
+      &--item:last-child{
+        margin-bottom: 0;
+      }
+      &--link{
+        color: $font-color;
+      }
+      &--link:hover{
+        color:$font-color;
+      }
+    }
+  }
+}
+//フォントアイコン　ナビゲーション
+.nav-fas{
+  margin-right: $space_m;
+}

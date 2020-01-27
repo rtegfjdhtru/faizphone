@@ -1,0 +1,29 @@
+.c-title {
+  font-size: 2em;
+  text-align: center;
+  width: 80%;
+  margin:0 auto;
+
+  &--border{
+    display: flex;
+    align-items: center;
+    &:before,&:after{
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background: #444;
+      display: block;
+    }
+    &:before {
+      margin-right: .4em;
+    }
+    &:after {
+      margin-left: .4em;
+    }
+  }
+}
+
+.p-name--title{
+  font-family: 'ヒラギノ角ゴ Pro W6',  'HiraKakuPro-W6','ＭＳ 明朝', 'MS Mincho';
+  font-size: 2em;
+}

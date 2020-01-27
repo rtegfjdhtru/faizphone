@@ -1,0 +1,19 @@
+.p-slide {
+  @include sumaho(){
+    width: 100%;
+    height: 100vh;
+    background: #131312; //todo  色調整
+    color: white;
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    &--active{
+      transform: translateX(-40%);
+      transition: .5s;
+      z-index: 2;
+    }
+
+  }
+
+}

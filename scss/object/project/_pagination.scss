@@ -1,0 +1,29 @@
+.p-pagination {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  &--active li a{
+    //background: #2dbcf6;
+    //color: white;
+  }
+  & li{
+    font-size: 1.3em;
+    margin-right: 5px;
+    :last-child{
+      margin-right: 0;
+    }
+    & a{
+      display: block;
+      padding: .5em .8em;
+      border: .1em solid #2dbcf6;
+      color: #242727;
+
+    }
+  }
+}
+//active状態
+li a.p-pagination--active{
+  background: #2dbcf6;
+  color: white;
+}
+
