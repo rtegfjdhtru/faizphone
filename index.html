@@ -29,13 +29,13 @@
         </nav>
 
         <!--ハンバーガ-->
-            <a class="menu-trigger " :class="{'active':isActive}" @click="menuActive">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+        <a class="menu-trigger " :class="{'active':isActive}" @click="menuActive">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
     </div>
-<!--メニューカバー-->
+    <!--メニューカバー-->
     <div class="u-cover" :class="{'u-cover--active':isActive}"></div>
 
 </header>
@@ -52,104 +52,68 @@
         <h1 class="c-title c-title--border">ABOUT</h1>
         <div class="p-about--container">
 
-            <div class="p-about--container--center">
-                <!--ユーザー画像-->
-                <img src="image/publicdomainq-0000046pde.jpg" alt="ユーザの画像" class="c-circle">
-                <p class="p-name--title">レオナルド・ダ・ヴィンチ　(Leonardo da Vinci)</p>
-                <div class="p-sns-container">
-                    <a href="">
-                        <div class="p-sns-container-bottom p-sns-container--twitter"><i
-                                class="fab fa-twitter p-sns-container--icon"></i></div>
-                    </a>
-                    <a href="">
-                        <div class="p-sns-container-bottom p-sns-container--facebook"><i
-                                class="fab fa-facebook-f p-sns-container--icon"></i></div>
-                    </a>
-                    <a href="">
-                        <div class="p-sns-container-bottom p-sns-container--instagram"><i
-                                class="fab fa-instagram p-sns-container--icon"></i></div>
-                    </a>
-                </div>
-                <p class="p-about--container--text">イラストレータ、デザイン,カメラマン,書道、プログラマーとして活躍中。<br/>
-                    都内広告の写真の撮影,ps4,Xbox,などのゲームのパッケージデザインを担当。<br/>
-                    趣味はバイク、車、釣り、食事、日曜大工。
-
-
-                </p>
+            <div class="p-about--container__images">
+            <img src="image/publicdomainq-0000046pde.jpg" alt="ユーザーアイコン" class="p-about--image">
+            <div class="p-sns-container">
+                <a href="">
+                    <div class="p-sns-container-bottom p-sns-container--twitter"><i
+                            class="fab fa-twitter p-sns-container--icon"></i></div>
+                </a>
+                <a href="">
+                    <div class="p-sns-container-bottom p-sns-container--facebook"><i
+                            class="fab fa-facebook-f p-sns-container--icon"></i></div>
+                </a>
+                <a href="">
+                    <div class="p-sns-container-bottom p-sns-container--instagram"><i
+                            class="fab fa-instagram p-sns-container--icon"></i></div>
+                </a>
+            </div>
             </div>
 
-            <div class="p-about--container--left">
-                <div class="p-about--container--left--text">
-                    <p class="p-about--container--title">ツール</p>
-                    PhotoshopCS6,Illustrator,Lightroom,CLIP STUDIO PAINT
-                    <p class="p-about--container--title">使用道具</p>
-                    Macbookpro,Nikon(D850),壺中天 大 秀筆堂,玉品 5.0丁型 墨運堂<br/>
-                    <p class="p-about--container--title">スキル</p>
-                    Photoshopをメインツールにイラスト、デザイン作成。<br/>
-                    写真編集にLightroom、補助ツールにPhotoshopを使用<br/>
-                    書道十段、町内会最優秀賞受賞
-                    <p class="p-about--container--title">自己紹介</p>
-                    あああああああああああああああああああああああああああ<br/>
-                    あああああああああああああああああああああああああああ<br/>
-                    あああああああああああああああああああああああああああ
+            <div class="p-about--container--text">
+                <h1>レオナルド/Leonardo</h1>
+                <p>フリーランスイラストレータ<br/>
+                    2020年ライトノベル〇〇担当<br/>
+                    PS4〇〇キーヴィジュアル担当など<br/>
+                    ゲーム、アニメ、広告、書籍イラスト、技法書執筆などで様々な作品を世に出してます。</p>
+                <div class="p-about--container--text__intro">
+                    イラストを描いて生活しています。<br/>
+                    得意な分野は背景<br/>
+                    最近のマイブームは食べ歩きです。
                 </div>
-
             </div>
+
+
         </div>
     </section>
 
     <!--portfolio-->
     <section class="p-portfolio" id="portfolio">
         <h1 class="c-title c-title--border">PORTFOLIO</h1>
-        <div class="p-portfolio--body">
-        <div class="p-portfolio--container">
 
-            <a href="" class="c-panel">
-                <div class="c-panel--body">
-                    <img src="image/bansan00.jpg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </div>
-            </a>
-            <a href="" class="c-panel">
-                <div class="c-panel--body">
-                    <img src="image/sdsdf.jpeg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </div>
-            </a>
-            <a href="" class="c-panel">
-                <div class="c-panel--body">
-                    <img src="image/ada.jpeg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </div>
-            </a>
-            <a href="" class="c-panel">
-                <div class="c-panel--body">
-                    <img src="image/bansan00.jpg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </div>
-            </a>
-        </div>
+            <div class="p-portfolio--container">
+                <a href="" class="c-panel">
+                    <div class="c-panel--body">
+                        <img src="image/bansan00.jpg" alt="ポートフォリオの写真" class="c-panel--body--image">
+                    </div>
+                </a>
+                <a href="" class="c-panel">
+                    <div class="c-panel--body">
+                        <img src="image/sdsdf.jpeg" alt="ポートフォリオの写真" class="c-panel--body--image">
+                    </div>
+                </a>
+                <a href="" class="c-panel">
+                    <div class="c-panel--body">
+                        <img src="image/ada.jpeg" alt="ポートフォリオの写真" class="c-panel--body--image">
+                    </div>
+                </a>
+                <a href="" class="c-panel">
+                    <div class="c-panel--body">
+                        <img src="image/bansan00.jpg" alt="ポートフォリオの写真" class="c-panel--body--image">
+                    </div>
+                </a>
+            </div>
 
-
-        <div class="p-portfolio--container">
-            <a href="" class="c-panel">
-                <div class="c-panel--body">
-                    <img src="image/35s.jpg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </div>
-            </a>
-            <a href="" class="c-panel">
-                <div class="c-panel--body">
-                    <img src="image/publicdomainq-0000046pde.jpg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </div>
-            </a>
-            <a href="" class="c-panel">
-                <div class="c-panel--body">
-                    <img src="image/asasdegrgs.jpg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </div>
-            </a>
-            <a href="" class="c-panel">
-                <div class="c-panel--body">
-                    <img src="image/asasdegrgs.jpg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </div>
-            </a>
-        </div>
-        </div>
     </section>
 
     <!--contact-->
@@ -157,15 +121,15 @@
         <h1 class="c-title u-margin-bottom c-title--border">CONTACT</h1>
         <form action="" class="p-contact__form">
             <p class="u-margin-form">お名前、企業名(必須)
-            <input type="text" name="name" class="p-contact__input">
+                <input type="text" name="name" class="p-contact__input">
             </p>
             <p class="u-margin-form">メールアドレス(必須)
-            <input type="text" name="email" class="p-contact__input">
+                <input type="text" name="email" class="p-contact__input">
             </p>
             <p class="u-margin-form">お問い合わせ内容
-            <textarea type="text" name="text" class="p-contact__input p-contact__input--textarea"></textarea>
+                <textarea type="text" name="text" class="p-contact__input p-contact__input--textarea"></textarea>
             </p>
-         <input type="submit" class="p-contact__submit u-margin-form" value="送信">
+            <input type="submit" class="p-contact__submit u-margin-form" value="送信">
 
         </form>
 

@@ -1,60 +1,96 @@
 .p-about {
   padding-top: 50px;
+  padding-bottom: 50px;
   //padding-bottom: 100px;
   //background: $header-color; //todo　考え中
   //color: #fff;
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
+
   @include sumaho() {
     width: 100%;
   }
 
-
   &--container {
-    //margin-top: 100px;
-    display: flex;
-    //flex-direction: row;
-    justify-content: space-around;
-    margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    @include sumaho(){
-      display: block;
+    width: 800px;
+    margin: 0 auto;
+
+    &__images {
+      float: left;
     }
+
     &--text {
-      font-size: 1.4em;
-    }
+      float: right;
+      width: 400px;
+      &,h1 {
+        font-size: 1.5em;
+        font-family: "ＭＳ 明朝";
 
-    &--title {
-      font-weight: 500;
-      font-size: 1.4em;
-    }
-
-    &--center{
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    &--left {
-      margin-left: $space_m;
-      margin-right: $space_m;
-      display: flex;
-      justify-content: space-around;
-      @include sumaho(){
-        flex-direction: column;
       }
-      &--text {
-        font-size: 1.4em;
+      &__intro {
+        padding-top: 10px;
       }
     }
   }
 
   &--image {
-    max-width: calc(1330px - 50%);
-    max-height: 300px;
-    @include sumaho(){
-      max-width:100%;
-    }
+    max-width: 150px;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
   }
+
+
+
+  /*
+    &--container {
+      //margin-top: 100px;
+      display: flex;
+      //flex-direction: row;
+      justify-content: space-around;
+      margin: 0 auto;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      @include sumaho(){
+        display: block;
+      }
+      &--text {
+        font-size: 1.4em;
+      }
+
+      &--title {
+        font-weight: 500;
+        font-size: 1.4em;
+      }
+
+      &--center{
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      &--left {
+        margin-left: $space_m;
+        margin-right: $space_m;
+        display: flex;
+        justify-content: space-around;
+        @include sumaho(){
+          flex-direction: column;
+        }
+        &--text {
+          font-size: 1.4em;
+        }
+      }
+    }
+
+    &--image {
+      max-width: calc(1330px - 50%);
+      max-height: 300px;
+      @include sumaho(){
+        max-width:100%;
+      }
+    }
+    */
 }

@@ -1,18 +1,19 @@
 .p-portfolio {
   //padding-top: 100px;
   //padding-bottom: 100px;
-  &--body {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
+
 
   &--container {
+    padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    padding-right: 20px;
-    padding-left: 20px;
-    width: $port-folio-width;
+    flex-direction: row;
+    justify-content: space-evenly;
+    //justify-content: space-around;
+    //margin: 0 auto;
+    //padding-right: 20px;
+    //padding-left: 20px;
+    //width: $port-folio-width;
     @include pro() {
       flex-wrap: wrap;
       width: 100%;
