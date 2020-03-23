@@ -1,13 +1,7 @@
 .p-about {
   padding-top: 50px;
-  padding-bottom: 50px;
-  //padding-bottom: 100px;
-  //background: $header-color; //todo　考え中
-  //color: #fff;
   overflow: hidden;
-  width: 100%;
   margin: 0 auto;
-
   @include sumaho() {
     width: 100%;
   }
@@ -17,17 +11,30 @@
     padding-bottom: 50px;
     width: 800px;
     margin: 0 auto;
+    overflow: hidden;
 
-    &__images {
+    @include sumaho() {
+      width: auto;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    &--left{
       float: left;
+      @include sumaho() {
+        float: none;
+      }
     }
 
     &--text {
       float: right;
       width: 400px;
+      @include sumaho() {
+        float: none;
+        width: auto;
+      }
       &,h1 {
         font-size: 1.5em;
-        font-family: "ＭＳ 明朝";
+        font-family: none;
 
       }
       &__intro {
@@ -40,7 +47,7 @@
     max-width: 150px;
     max-height: 200px;
     display: block;
-    margin: 0 auto;
+    margin: auto;
   }
 
 
