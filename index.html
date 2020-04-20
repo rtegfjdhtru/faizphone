@@ -3,150 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="サンプルサイト">
-    <meta name="keyword" content="ケーキ,コーヒー,喫茶店">
-    <title>ホーム</title>
+    <meta name="description" content="ファイズフォン　遊び　テスト">
+    <title>ファイズフォン</title>
     <link rel="stylesheet" href="src/css/style.css">
     <link href="fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162439321-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162439321-3');
+    </script>
+
 </head>
 <body>
 <!--ヘッダー-->
 
-<header class="l-header" id="header">
-    <div class="l-header-container">
-        <!--ここを画像にするか文字にするかは自由　とりあえず直style-->
-        <a href="index.html" class="title_name">HPの名前</a>
-        <nav class="p-slide" :class="{'p-slide--active':isActive}" @click="menuClickOut">
-            <ul>
-                <li><a href="">TOP</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <li><a href="">Twitter</a></li>
-                <li><a href="blog.html">BLOG</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-            </ul>
-        </nav>
 
-        <!--ハンバーガ-->
-        <a class="menu-trigger " :class="{'active':isActive}" @click="menuActive">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-    </div>
-    <!--メニューカバー-->
-    <div class="u-cover" :class="{'u-cover--active':isActive}"></div>
+<header id="header">
+    <audio preload="auto">
+        <source src="music/faizp1.mp3" type="audio/mp3" id="js-btn1">
+    </audio>
 
+    <section class="container">
+
+        <div class="row--enter">
+        <div v-on:click="judg()" class="c-btn c-btn--enter">ENTER</div>
+        </div>
+
+        <div class="row">
+            <div v-on:click="" class="c-btn c-btn--phone c-btn--phone__left"><i class="fas fa-phone"></i></div>
+            <div v-on:click="clear()" class="c-btn c-btn--clear">ｸﾘｱ</div>
+            <div v-on:click="off('')" class="c-btn c-btn--phone c-btn--phone__right"><i class="fas fa-phone-slash"></i></div>
+        </div>
+
+        <div class="row">
+            <div v-on:click="playBtn('1')" class="c-btn">1 <span class="c-btn--sub">あ</span></div>
+            <div v-on:click="playBtn('2')" class="c-btn">2 <span class="c-btn--sub">か<br/>ABC</span></div>
+            <div v-on:click="playBtn('3')" class="c-btn">3 <span class="c-btn--sub">さ<br/>DEF</span></div>
+        </div>
+        <div class="row">
+            <div v-on:click="playBtn('4')" class="c-btn">4 <span class="c-btn--sub">た<br/>GHI</span></div>
+            <div v-on:click="playBtn('5')" class="c-btn">5 <span class="c-btn--sub">な<br/>JKL</span></div>
+            <div v-on:click="playBtn('6')" class="c-btn">6 <span class="c-btn--sub">は<br/>OPQ</span></div>
+        </div>
+        <div class="row">
+            <div v-on:click="playBtn('7')" class="c-btn">7 <span class="c-btn--sub">ま<br/>RST</span></div>
+            <div v-on:click="playBtn('8')" class="c-btn">8 <span class="c-btn--sub">や<br/>UVW</span></div>
+            <div v-on:click="playBtn('9')" class="c-btn">9 <span class="c-btn--sub">ら<br/>XYZ</span></div>
+        </div>
+        <div class="row">
+            <div v-on:click="playBtn('')" class="c-btn">❇︎<span class="c-btn--sub"> 、、。<br/>　　＠</span></span></div>
+            <div v-on:click="playBtn('0')" class="c-btn">0 <span class="c-btn--sub">わをん</span></div>
+            <div v-on:click="playBtn('')" class="c-btn"># <span class="c-btn--sub">　<br/>マナー</span></span></div>
+        </div>
+
+        <button class="btn-real-dent" v-on:click="shot()"></button>
+    </section>
 </header>
 
+
 <!--ヒーローヘッダー-->
-<main class="l-main">
-
-    <section class="p-hero">
-        <img src="image/ERgnm0fU0AAV7Pb 2.jpg" alt="" class="p-hero--images">
-    </section>
-
-    <!--about-->
-    <section class="p-about" id="about">
-        <h1 class="c-title c-title--border">ABOUT</h1>
-
-
-        <div class="p-about--container">
-
-            <div class="p-about--container--left">
-            <img src="image/publicdomainq-0000046pde.jpg" alt="ユーザーアイコン" class="p-about--image">
-            <div class="p-sns-container">
-                <a href="">
-                    <div class="p-sns-container-bottom p-sns-container--twitter"><i
-                            class="fab fa-twitter p-sns-container--icon"></i></div>
-                </a>
-                <a href="">
-                    <div class="p-sns-container-bottom p-sns-container--facebook"><i
-                            class="fab fa-facebook-f p-sns-container--icon"></i></div>
-                </a>
-                <a href="">
-                    <div class="p-sns-container-bottom p-sns-container--instagram"><i
-                            class="fab fa-instagram p-sns-container--icon"></i></div>
-                </a>
-            </div>
-            </div>
-
-            <div class="p-about--container--text">
-                <h1>レオナルド/Leonardo</h1>
-                <p>フリーランスイラストレータ<br/>
-                    2020年ライトノベル〇〇担当<br/>
-                    PS4〇〇キーヴィジュアル担当など<br/>
-                    ゲーム、アニメ、広告、書籍イラスト、技法書執筆などで様々な作品を世に出してます。</p>
-                <div class="p-about--container--text__intro">
-                    イラストを描いて生活しています。<br/>
-                    得意な分野は背景<br/>
-                    最近のマイブームは食べ歩きです。
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-
-    <!--portfolio-->
-    <section class="p-portfolio" id="portfolio">
-        <h1 class="c-title c-title--border">PORTFOLIO</h1>
-
-            <div class="p-portfolio--container">
-
-                <a href="image/sdsdf.jpeg" class="c-panel">
-                    <img src="image/sdsdf.jpeg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </a>
-                <a href="" class="c-panel">
-                    <img src="image/asasdegrgs.jpg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </a>
-                <a href="" class="c-panel">
-                    <img src="image/sdsdf.jpeg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </a>
-                <a href="" class="c-panel">
-                    <img src="image/sdsdf.jpeg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </a>
-                <a href="" class="c-panel">
-                    <img src="image/bansan00.jpg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </a>
-                <a href="" class="c-panel">
-                    <img src="image/sdsdf.jpeg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </a>
-                <a href="" class="c-panel">
-                    <img src="image/ada.jpeg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </a>
-                <a href="" class="c-panel">
-                    <img src="image/ada.jpeg" alt="ポートフォリオの写真" class="c-panel--body--image">
-                </a>
-
-            </div>
-
-    </section>
-
-    <!--contact-->
-    <section class="p-contact" id="contact">
-        <h1 class="c-title u-margin-bottom c-title--border">CONTACT</h1>
-        <form action="" class="p-contact__form">
-            <p class="u-margin-form">お名前、企業名(必須)
-                <input type="text" name="name" class="p-contact__input">
-            </p>
-            <p class="u-margin-form">メールアドレス(必須)
-                <input type="text" name="email" class="p-contact__input">
-            </p>
-            <p class="u-margin-form">お問い合わせ内容
-                <textarea type="text" name="text" class="p-contact__input p-contact__input--textarea"></textarea>
-            </p>
-            <input type="submit" class="p-contact__submit u-margin-form" value="送信">
-
-        </form>
-
-    </section>
-    <footer class="l-footer">
-        © Copyright 2019 テキスト All rights reserved
-    </footer>
-
-</main>
 
 
 <script src="dist/js/bundle.js"></script>

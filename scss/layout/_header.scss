@@ -1,18 +1,20 @@
-.l-header{
-  //todo userによる変更
-  background: $header-color;
-  z-index: 2;
-  //overflow: hidden;
-  @include ipad(){
-    position: fixed;
-    width: 100%;
-  }
-  &-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin:0 auto;
-    width: 80%;
-    height: 70px;
+#header {
+  background: #e4e4e4;;
+  height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  width: 300px;
+  padding: 15px;
+  background: #b7b7b7;
+  //transform:translateY(20%);
+}
+
+.row {
+  display: flex;
+  &--enter{
+    margin: 5px;
   }
 }
