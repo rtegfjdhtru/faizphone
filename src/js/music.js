@@ -1,10 +1,10 @@
 import Vue from 'vue';
-import axios from 'axios';
+//これあるといけない？
+// import axios from 'axios';
 
 let context = new AudioContext();
-let req = new XMLHttpRequest();
 let getAudioBuffer = function (url, fn) {
-    var req = new XMLHttpRequest();
+    let req = new XMLHttpRequest();
     req.responseType = 'arraybuffer';
     req.onreadystatechange = function () {
         if (req.readyState === 4) {
@@ -19,7 +19,7 @@ let getAudioBuffer = function (url, fn) {
     req.send('');
 };
 let playSound = function (buffer) {
-    var source = context.createBufferSource();
+    let source = context.createBufferSource();
     source.buffer = buffer;
     source.connect(context.destination);
     source.start(0);
@@ -36,7 +36,7 @@ new Vue({
         burst: false,
         shotcount: 12,
         standby: false,
-        player: new Audio(),
+
         se: [
             {
                 id: 1,
@@ -128,131 +128,139 @@ new Vue({
     //     this.player.play();
     // },
     mounted: function () {
-        // var req = new XMLHttpRequest();
-        // req.open('GET', 'localhost:3000', true);
-        // console.log(req);
-    },
-    methods: {
-        playBtn: function (num) {
-            if (this.count === 0) {
-                this.current = this.se[1];
-                this.player.src = this.current.src;
-                this.player.play();
-                this.number = num;
-                this.count++;
-                console.log(this.number);
-            } else if (this.count === 1) {
-                this.current = this.se[2];
-                this.player.src = this.current.src;
-                this.player.play();
-                this.number = this.number + num;
-                this.count++;
-                console.log(this.number);
-            } else if (this.count === 2) {
-                this.current = this.se[3];
-                this.player.src = this.current.src;
-                this.player.play();
-                this.number = this.number + num;
-                this.count++;
-                console.log(this.number);
-            } else if (this.count === 3) {
-                this.current = this.se[3];
-                this.player.src = this.current.src;
-                this.player.play();
-                this.number = this.number + num;
-                this.count = 0;
-                console.log(this.number);
-            }
-        },
-
-
-        judg: function () {
-            if (this.number === '555' && this.hensin === false) {
-                //変身
-                this.current = this.se[4];
-                this.hensin = true;
-                setTimeout(function () {
-                    this.current = this.se[5];
-                    this.player.src = this.current.src;
-                    this.player.play();
-                    this.number = '';
-                }.bind(this), 1100)
-            } else if (this.hensin !== false && this.number === '') {
-                //Exceed charge
-                this.current = this.se[6];
-            } else if (this.hensin !== false && this.number === '3821') {
-                this.current = this.se[7];
-            } else if (this.hensin !== false && this.number === '103') {
-                this.current = this.se[9];
-                this.single = true;
-                this.burst = false;
-            } else if (this.hensin !== false && this.number === '106') {
-                this.current = this.se[10];
-                this.burst = true;
-                this.single = false;
-            } else if (this.hensin !== false && this.number === '279') {
-                this.current = this.se[11];
-                this.shotcount = 12;
-            } else {
-                //指定の番号出なければエラー音
-                this.current = this.se[8];
-                this.player.src = this.current.src;
-                this.player.play();
-            }
-            this.player.src = this.current.src;
-            this.player.play();
-            //番号の初期化
-            this.number = '';
-            this.count = 0;
-        },
-        //変身解除
-        off: function () {
-            if (this.hensin === true) {
-                this.current = this.se[12];
-                this.player.src = this.current.src;
-                this.player.play();
-                this.hensin = false
-            }
-        },
-        //コマンド初期化
-        clear: function () {
-            this.number = '';
-            this.count = 0;
-        },
-        shot: function () {
-            if (this.single === true && this.hensin === true) {
-                this.current = this.se[13];
-                this.player.src = this.current.src;
-                this.player.play();
-                this.shotcount--;
-                if (this.shotcount < 0) {
-                    this.current = this.se[15];
-                    this.player.src = this.current.src;
-                    this.player.play();
-                }
-            } else if (this.burst === true && this.hensin === true) {
-                this.current = this.se[14];
-                this.player.src = this.current.src;
-                this.player.play();
-                this.shotcount = this.shotcount - 3;
-                console.log(this.shotcount);
-                if (this.shotcount < 0) {
-                    this.current = this.se[15];
-                    this.player.src = this.current.src;
-                    this.player.play();
-                }
-            }
-        },
-        musicPlay:function () {
-            this.current = this.se[1];
-            this.player.src = this.current.src;
-            getAudioBuffer(this.player.src,function (buffer) {
-                playSound(buffer);
-            })
+        window.onload = function() {
+            // サウンドを読み込む
+            getAudioBuffer('./music/charge.mp3', function (buffer) {
+                // 読み込み完了後にボタンにクリックイベントを登録
+                var btn = document.getElementById('btn');
+                btn.onclick = function () {
+                    // サウンドを再生
+                    playSound(buffer);
+                };
+            });
         }
-
-
     },
+    // methods: {
+    //     playBtn: function (num) {
+    //         if (this.count === 0) {
+    //             this.current = this.se[1];
+    //             this.player.src = this.current.src;
+    //             this.player.play();
+    //             this.number = num;
+    //             this.count++;
+    //             console.log(this.number);
+    //         } else if (this.count === 1) {
+    //             this.current = this.se[2];
+    //             this.player.src = this.current.src;
+    //             this.player.play();
+    //             this.number = this.number + num;
+    //             this.count++;
+    //             console.log(this.number);
+    //         } else if (this.count === 2) {
+    //             this.current = this.se[3];
+    //             this.player.src = this.current.src;
+    //             this.player.play();
+    //             this.number = this.number + num;
+    //             this.count++;
+    //             console.log(this.number);
+    //         } else if (this.count === 3) {
+    //             this.current = this.se[3];
+    //             this.player.src = this.current.src;
+    //             this.player.play();
+    //             this.number = this.number + num;
+    //             this.count = 0;
+    //             console.log(this.number);
+    //         }
+    //     },
+    //
+    //
+    //     judg: function () {
+    //         if (this.number === '555' && this.hensin === false) {
+    //             //変身
+    //             this.current = this.se[4];
+    //             this.hensin = true;
+    //             setTimeout(function () {
+    //                 this.current = this.se[5];
+    //                 this.player.src = this.current.src;
+    //                 this.player.play();
+    //                 this.number = '';
+    //             }.bind(this), 1100)
+    //         } else if (this.hensin !== false && this.number === '') {
+    //             //Exceed charge
+    //             this.current = this.se[6];
+    //         } else if (this.hensin !== false && this.number === '3821') {
+    //             this.current = this.se[7];
+    //         } else if (this.hensin !== false && this.number === '103') {
+    //             this.current = this.se[9];
+    //             this.single = true;
+    //             this.burst = false;
+    //         } else if (this.hensin !== false && this.number === '106') {
+    //             this.current = this.se[10];
+    //             this.burst = true;
+    //             this.single = false;
+    //         } else if (this.hensin !== false && this.number === '279') {
+    //             this.current = this.se[11];
+    //             this.shotcount = 12;
+    //         } else {
+    //             //指定の番号出なければエラー音
+    //             this.current = this.se[8];
+    //             this.player.src = this.current.src;
+    //             this.player.play();
+    //         }
+    //         this.player.src = this.current.src;
+    //         this.player.play();
+    //         //番号の初期化
+    //         this.number = '';
+    //         this.count = 0;
+    //     },
+    //     //変身解除
+    //     off: function () {
+    //         if (this.hensin === true) {
+    //             this.current = this.se[12];
+    //             this.player.src = this.current.src;
+    //             this.player.play();
+    //             this.hensin = false
+    //         }
+    //     },
+    //     //コマンド初期化
+    //     clear: function () {
+    //         this.number = '';
+    //         this.count = 0;
+    //     },
+    //     shot: function () {
+    //         if (this.single === true && this.hensin === true) {
+    //             this.current = this.se[13];
+    //             this.player.src = this.current.src;
+    //             this.player.play();
+    //             this.shotcount--;
+    //             if (this.shotcount < 0) {
+    //                 this.current = this.se[15];
+    //                 this.player.src = this.current.src;
+    //                 this.player.play();
+    //             }
+    //         } else if (this.burst === true && this.hensin === true) {
+    //             this.current = this.se[14];
+    //             this.player.src = this.current.src;
+    //             this.player.play();
+    //             this.shotcount = this.shotcount - 3;
+    //             console.log(this.shotcount);
+    //             if (this.shotcount < 0) {
+    //                 this.current = this.se[15];
+    //                 this.player.src = this.current.src;
+    //                 this.player.play();
+    //             }
+    //         }
+    //     },
+        // musicPlay:function () {
+        //     this.current = this.se[1];
+        //     this.player.src = this.current.src;
+        //     getAudioBuffer(this.player.src,function (buffer) {
+        //         playSound(buffer);
+        //     })
+        // }
+
+
+
 
 
 })
