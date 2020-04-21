@@ -1,15 +1,40 @@
 import Vue from 'vue';
+import axios from 'axios';
+
+let context = new AudioContext();
+let req = new XMLHttpRequest();
+let getAudioBuffer = function (url, fn) {
+    var req = new XMLHttpRequest();
+    req.responseType = 'arraybuffer';
+    req.onreadystatechange = function () {
+        if (req.readyState === 4) {
+            if (req.status === 0 || req.status === 200) {
+                context.decodeAudioData(req.response, function (buffer) {
+                    fn(buffer)
+                });
+            }
+        }
+    };
+    req.open('GET', url, true);
+    req.send('');
+};
+let playSound = function (buffer) {
+    var source = context.createBufferSource();
+    source.buffer = buffer;
+    source.connect(context.destination);
+    source.start(0);
+};
 
 new Vue({
     el: '#header',
     data: {
         current: {},
         count: 0,
-        hensin:false,
+        hensin: false,
         number: '',
-        single:false,
-        burst:false,
-        shotcount:12,
+        single: false,
+        burst: false,
+        shotcount: 12,
         standby: false,
         player: new Audio(),
         se: [
@@ -102,6 +127,11 @@ new Vue({
     //     this.player.src = this.current.src;
     //     this.player.play();
     // },
+    mounted: function () {
+        // var req = new XMLHttpRequest();
+        // req.open('GET', 'localhost:3000', true);
+        // console.log(req);
+    },
     methods: {
         playBtn: function (num) {
             if (this.count === 0) {
@@ -115,18 +145,17 @@ new Vue({
                 this.current = this.se[2];
                 this.player.src = this.current.src;
                 this.player.play();
-                 this.number = this.number + num;
+                this.number = this.number + num;
                 this.count++;
                 console.log(this.number);
             } else if (this.count === 2) {
                 this.current = this.se[3];
                 this.player.src = this.current.src;
                 this.player.play();
-                 this.number = this.number + num;
+                this.number = this.number + num;
                 this.count++;
                 console.log(this.number);
-            }
-            else if (this.count === 3) {
+            } else if (this.count === 3) {
                 this.current = this.se[3];
                 this.player.src = this.current.src;
                 this.player.play();
@@ -135,7 +164,6 @@ new Vue({
                 console.log(this.number);
             }
         },
-
 
 
         judg: function () {
@@ -148,24 +176,24 @@ new Vue({
                     this.player.src = this.current.src;
                     this.player.play();
                     this.number = '';
-               }.bind(this), 1100)
-            }else if(this.hensin !== false && this.number ===''){
+                }.bind(this), 1100)
+            } else if (this.hensin !== false && this.number === '') {
                 //Exceed charge
                 this.current = this.se[6];
-            }else if(this.hensin !== false && this.number === '3821'){
+            } else if (this.hensin !== false && this.number === '3821') {
                 this.current = this.se[7];
-            }else if(this.hensin !== false && this.number === '103'){
+            } else if (this.hensin !== false && this.number === '103') {
                 this.current = this.se[9];
                 this.single = true;
                 this.burst = false;
-            }else if(this.hensin !== false && this.number === '106'){
+            } else if (this.hensin !== false && this.number === '106') {
                 this.current = this.se[10];
                 this.burst = true;
-                this.single =false;
-            }else if(this.hensin !== false && this.number === '279'){
+                this.single = false;
+            } else if (this.hensin !== false && this.number === '279') {
                 this.current = this.se[11];
                 this.shotcount = 12;
-            }else{
+            } else {
                 //指定の番号出なければエラー音
                 this.current = this.se[8];
                 this.player.src = this.current.src;
@@ -175,11 +203,11 @@ new Vue({
             this.player.play();
             //番号の初期化
             this.number = '';
-            this.count =0;
+            this.count = 0;
         },
         //変身解除
-        off:function(){
-            if(this.hensin === true){
+        off: function () {
+            if (this.hensin === true) {
                 this.current = this.se[12];
                 this.player.src = this.current.src;
                 this.player.play();
@@ -187,33 +215,40 @@ new Vue({
             }
         },
         //コマンド初期化
-        clear:function () {
+        clear: function () {
             this.number = '';
-            this.count =0;
+            this.count = 0;
         },
-        shot:function(){
-            if(this.single === true && this.hensin === true){
+        shot: function () {
+            if (this.single === true && this.hensin === true) {
                 this.current = this.se[13];
                 this.player.src = this.current.src;
                 this.player.play();
                 this.shotcount--;
-                if(this.shotcount < 0){
+                if (this.shotcount < 0) {
                     this.current = this.se[15];
                     this.player.src = this.current.src;
                     this.player.play();
                 }
-            }else if(this.burst === true && this.hensin === true){
+            } else if (this.burst === true && this.hensin === true) {
                 this.current = this.se[14];
                 this.player.src = this.current.src;
                 this.player.play();
-                this.shotcount = this.shotcount-3;
+                this.shotcount = this.shotcount - 3;
                 console.log(this.shotcount);
-                if(this.shotcount < 0){
+                if (this.shotcount < 0) {
                     this.current = this.se[15];
                     this.player.src = this.current.src;
                     this.player.play();
                 }
             }
+        },
+        musicPlay:function () {
+            this.current = this.se[1];
+            this.player.src = this.current.src;
+            getAudioBuffer(this.player.src,function (buffer) {
+                playSound(buffer);
+            })
         }
 
 

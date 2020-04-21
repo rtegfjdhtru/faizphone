@@ -2,74 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5313612f-29d0-41f9-97f0-0c222bf0acd0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.babel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/150332_01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/20191006151802.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/35s.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/53702_jojos_bizarre_adventure-400x270-MM-100.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/81Bc+G0bgcL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ERJGQE8UEAIe_m6 2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ERJGQE8UEAIe_m6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ERVbTe-UYAEXh44 2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ERgnm0fU0AAV7Pb 2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ada.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/asasdegrgs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/autumn-4579561_1280.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bansan00.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/d0066343_9542327.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/e87144.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/publicdomainq-0000046pde.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/sdsdf.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/layout/_blog.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/layout/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/layout/_gallery.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/layout/_header 0.06.03.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/layout/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/layout/_main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/comppnent/_btn.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/object/comppnent/_btn.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/comppnent/_card.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/comppnent/_circle.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/comppnent/_cover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/comppnent/_menu.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/comppnent/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/comppnent/_panel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/comppnent/_signup.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/comppnent/_tag.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/comppnent/_title.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_about.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_contact.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_detaild.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_details.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_hero.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_menuber.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_navigation.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_portfolio.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_purof.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_search.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_sidemenu.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_slide.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/project/_sns.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/utillty/_background 0.05.53.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/utillty/_contanier.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/utillty/_cover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/utillty/_margin 0.05.53.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/utillty/_margin.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/object/utillty/_size.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/music.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/music.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/music.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +24,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/object/comppnent/_btn.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="-170">
               <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
             </state>
           </provider>
@@ -94,17 +33,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            <state relative-caret-position="204">
+              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/js/music.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+            <state relative-caret-position="589">
+              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -185,7 +136,6 @@
         <option value="$PROJECT_DIR$/scss/object/project/_about.scss" />
         <option value="$PROJECT_DIR$/src/js/app.js" />
         <option value="$PROJECT_DIR$/scss/object/comppnent/_btn.scss" />
-        <option value="$PROJECT_DIR$/src/js/music.js" />
         <option value="$PROJECT_DIR$/scss/object/comppnent/_title.scss" />
         <option value="$PROJECT_DIR$/scss/object/comppnent/_tag.scss" />
         <option value="$PROJECT_DIR$/scss/object/comppnent/_signup.scss" />
@@ -197,9 +147,10 @@
         <option value="$PROJECT_DIR$/scss/style.scss" />
         <option value="$PROJECT_DIR$/gulpfile.babel.js" />
         <option value="$PROJECT_DIR$/scss/layout/_header.scss" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/test..html" />
         <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/js/music.js" />
       </list>
     </option>
   </component>
@@ -340,12 +291,12 @@
       <workItem from="1586745001199" duration="4588000" />
       <workItem from="1586836117631" duration="34505000" />
       <workItem from="1587218849600" duration="216000" />
-      <workItem from="1587222748162" duration="5892000" />
+      <workItem from="1587222748162" duration="11053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239717000" />
+    <option name="totallyTimeSpent" value="244878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="967" extended-state="0" />
@@ -477,13 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/layout/_header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test..html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -498,34 +442,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/music.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1628">
-          <caret line="150" column="27" lean-forward="true" selection-start-line="150" selection-start-column="27" selection-end-line="150" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/object/comppnent/_btn.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="-170">
           <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/scss/layout/_header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        <state relative-caret-position="44">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+        <state relative-caret-position="589">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/music.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
