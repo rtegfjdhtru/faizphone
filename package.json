@@ -13,7 +13,8 @@
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "popper.js": "^1.15.0",
-    "vue": "^2.5.11"
+    "vue": "^2.5.11",
+    "vue-audio-visual": "^2.0.1"
   },
   "devDependencies": {
     "babel": "^6.23.0",
