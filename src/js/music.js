@@ -1,29 +1,7 @@
 import Vue from 'vue';
 // import axios from 'axios';
-
-let context = new AudioContext();
-let req = new XMLHttpRequest();
-let getAudioBuffer = function (url, fn) {
-    var req = new XMLHttpRequest();
-    req.responseType = 'arraybuffer';
-    req.onreadystatechange = function () {
-        if (req.readyState === 4) {
-            if (req.status === 0 || req.status === 200) {
-                context.decodeAudioData(req.response, function (buffer) {
-                    fn(buffer)
-                });
-            }
-        }
-    };
-    req.open('GET', url, true);
-    req.send('');
-};
-let playSound = function (buffer) {
-    var source = context.createBufferSource();
-    source.buffer = buffer;
-    source.connect(context.destination);
-    source.start(0);
-};
+import load from 'audio-loader'
+import play from 'audio-play'
 
 new Vue({
     el: '#header',
@@ -176,7 +154,7 @@ new Vue({
                     this.player.src = this.current.src;
                     this.player.play();
                     this.number = '';
-                }.bind(this), 1100)
+                }.bind(this), 2100)
             } else if (this.hensin !== false && this.number === '') {
                 //Exceed charge
                 this.current = this.se[6];
@@ -244,13 +222,38 @@ new Vue({
             }
         },
         musicPlay:function () {
+            let context = new AudioContext();
+            let req = new XMLHttpRequest();
+            let getAudioBuffer = function (url, fn) {
+                var req = new XMLHttpRequest();
+                req.responseType = 'arraybuffer';
+                req.onreadystatechange = function () {
+                    if (req.readyState === 4) {
+                        if (req.status === 0 || req.status === 200) {
+                            context.decodeAudioData(req.response, function (buffer) {
+                                fn(buffer)
+                            });
+                        }
+                    }
+                };
+                req.open('GET', url, true);
+                req.send('');
+            };
+            let playSound = function (buffer) {
+                var source = context.createBufferSource();
+                source.buffer = buffer;
+                source.connect(context.destination);
+                source.start(0);
+            };
             this.current = this.se[1];
             this.player.src = this.current.src;
             getAudioBuffer(this.player.src,function (buffer) {
                 playSound(buffer);
             })
+        },
+        btnSe: function () {
+            load('./music/fiazop.mp3').then(play);
         }
-
 
     },
 
