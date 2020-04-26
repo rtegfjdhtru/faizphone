@@ -1,3 +1,4 @@
+//version 1.1
 import Vue from 'vue';
 // import axios from 'axios';
 import load from 'audio-loader'
@@ -6,6 +7,7 @@ import play from 'audio-play'
 new Vue({
     el: '#header',
     data: {
+        power:false,
         current: {},
         count: 0,
         hensin: false,
@@ -96,6 +98,11 @@ new Vue({
                 title: 'null',
                 src: './music/null.mp3'
             },
+            {
+                id:17,
+                title:'off',
+                src:'./music/offse.mp3'
+            },
 
         ]
     },
@@ -115,28 +122,29 @@ new Vue({
             if (this.count === 0) {
                 this.current = this.se[1];
                 this.player.src = this.current.src;
-                this.player.play();
+
+                load('./music/faizp1.mp3').then(play);
                 this.number = num;
                 this.count++;
                 console.log(this.number);
             } else if (this.count === 1) {
                 this.current = this.se[2];
                 this.player.src = this.current.src;
-                this.player.play();
+                load('./music/faizp2.mp3').then(play);
                 this.number = this.number + num;
                 this.count++;
                 console.log(this.number);
             } else if (this.count === 2) {
                 this.current = this.se[3];
                 this.player.src = this.current.src;
-                this.player.play();
+                load('./music/faizp3.mp3').then(play);
                 this.number = this.number + num;
                 this.count++;
                 console.log(this.number);
             } else if (this.count === 3) {
                 this.current = this.se[3];
                 this.player.src = this.current.src;
-                this.player.play();
+                load('./music/faizp3.mp3').then(play);
                 this.number = this.number + num;
                 this.count = 0;
                 console.log(this.number);
@@ -152,9 +160,9 @@ new Vue({
                 setTimeout(function () {
                     this.current = this.se[5];
                     this.player.src = this.current.src;
-                    this.player.play();
+                    load(this.player.src).then(play);
                     this.number = '';
-                }.bind(this), 2100)
+                }.bind(this), 1000)
             } else if (this.hensin !== false && this.number === '') {
                 //Exceed charge
                 this.current = this.se[6];
@@ -175,10 +183,10 @@ new Vue({
                 //指定の番号出なければエラー音
                 this.current = this.se[8];
                 this.player.src = this.current.src;
-                this.player.play();
+                load(this.player.src).then(play);
             }
             this.player.src = this.current.src;
-            this.player.play();
+            load(this.player.src).then(play);
             //番号の初期化
             this.number = '';
             this.count = 0;
@@ -188,73 +196,56 @@ new Vue({
             if (this.hensin === true) {
                 this.current = this.se[12];
                 this.player.src = this.current.src;
-                this.player.play();
+                load(this.player.src).then(play);
                 this.hensin = false
             }
         },
         //コマンド初期化
         clear: function () {
+            load('./music/offse.mp3').then(play);
             this.number = '';
             this.count = 0;
         },
         shot: function () {
-            if (this.single === true && this.hensin === true) {
+            if (this.single === true && this.hensin === true && this.shotcount > 0) {
                 this.current = this.se[13];
                 this.player.src = this.current.src;
-                this.player.play();
+                load(this.player.src).then(play);
                 this.shotcount--;
-                if (this.shotcount < 0) {
-                    this.current = this.se[15];
-                    this.player.src = this.current.src;
-                    this.player.play();
-                }
-            } else if (this.burst === true && this.hensin === true) {
+
+                //空の場合
+            } else if  (this.shotcount === 0) {
+                this.current = this.se[15];
+                this.player.src = this.current.src;
+                load(this.player.src).then(play);
+            }
+
+            else if  (this.burst === true && this.hensin === true　&& this.shotcount > 0) {
                 this.current = this.se[14];
                 this.player.src = this.current.src;
-                this.player.play();
+                load(this.player.src).then(play);
                 this.shotcount = this.shotcount - 3;
                 console.log(this.shotcount);
-                if (this.shotcount < 0) {
-                    this.current = this.se[15];
-                    this.player.src = this.current.src;
-                    this.player.play();
-                }
+
+                //空の場合
+            }else if (this.shotcount === 0) {
+                this.current = this.se[15];
+                this.player.src = this.current.src;
+                load(this.player.src).then(play);
             }
         },
-        musicPlay:function () {
-            let context = new AudioContext();
-            let req = new XMLHttpRequest();
-            let getAudioBuffer = function (url, fn) {
-                var req = new XMLHttpRequest();
-                req.responseType = 'arraybuffer';
-                req.onreadystatechange = function () {
-                    if (req.readyState === 4) {
-                        if (req.status === 0 || req.status === 200) {
-                            context.decodeAudioData(req.response, function (buffer) {
-                                fn(buffer)
-                            });
-                        }
-                    }
-                };
-                req.open('GET', url, true);
-                req.send('');
-            };
-            let playSound = function (buffer) {
-                var source = context.createBufferSource();
-                source.buffer = buffer;
-                source.connect(context.destination);
-                source.start(0);
-            };
-            this.current = this.se[1];
-            this.player.src = this.current.src;
-            getAudioBuffer(this.player.src,function (buffer) {
-                playSound(buffer);
-            })
-        },
-        btnSe: function () {
-            load('./music/fiazop.mp3').then(play);
+        on:function(){
+            if(this.power === false){
+                this.power = true;
+                this.current = this.se[0];
+                this.player.src = this.current.src;
+                this.player.play();
+                //全て初期化
+                this.hensin = false;
+                this.number = '';
+                this.count = 0;
+            }
         }
-
     },
 
 
