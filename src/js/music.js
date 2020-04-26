@@ -1,4 +1,4 @@
-//version 1.1
+//version 1.1.1
 import Vue from 'vue';
 // import axios from 'axios';
 import load from 'audio-loader'
