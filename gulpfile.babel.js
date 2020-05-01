@@ -1,6 +1,3 @@
-
-
-
 import gulp from 'gulp';
 import webpackConfig from './webpack.config.js';
 import webpack from 'webpack-stream';

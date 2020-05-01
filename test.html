@@ -1,51 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
     <title>musicテスト</title>
 </head>
 <body>
-<button id="btn">ボタン</button>
-<script>
-    //以前の音声スクリプト
-    // function music() {
-    //     document.getElementById('js').play();
-    // }
-    window.AudioContext = window.AudioContext || window.webkitAudioContext;
-    var context = new AudioContext();
 
-    var getAudioBuffer = function (url, fn) {
-        var req = new XMLHttpRequest();
-        req.responseType = 'arraybuffer';
-        req.onreadystatechange = function () {
-            if (req.readyState === 4) {
-                if (req.status === 0 || req.status === 200) {
-                    context.decodeAudioData(req.response, function (buffer) {
-                        fn(buffer)
-                    });
-                }
-            }
-        };
-        req.open('GET', url, true);
-        req.send('');
-    };
-    var playSound = function (buffer) {
-        var source = context.createBufferSource();
-        source.buffer = buffer;
-        source.connect(context.destination);
-        source.start(0);
-    };
+<div id="app1">
+    <button id="btn" v-on:click="btnSe()">ボタン</button>
+    <p>{{message}}</p>
+</div>
 
-    window.onload = function () {
-        getAudioBuffer('music/faizp1.mp3', function (buffer) {
-            var btn = document.getElementById('btn');
-            btn.onclick = function () {
-                playSound(buffer);
-            };
-        });
-    };
+<script src="dist/js/bundle.js"></script>
 
-</script>
 </body>
 </html>
