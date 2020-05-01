@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/music.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="159" column="16" lean-forward="true" selection-start-line="159" selection-start-column="16" selection-end-line="159" selection-end-column="26" />
+            <state relative-caret-position="528">
+              <caret line="24" column="14" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="24" selection-end-column="14" />
               <folding>
                 <element signature="e#53#84#0" expanded="true" />
               </folding>
@@ -272,7 +272,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272003000" />
+    <option name="totallyTimeSpent" value="272421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="962" extended-state="6" />
@@ -473,8 +473,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/music.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="159" column="16" lean-forward="true" selection-start-line="159" selection-start-column="16" selection-end-line="159" selection-end-column="26" />
+        <state relative-caret-position="528">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="24" selection-end-column="14" />
           <folding>
             <element signature="e#53#84#0" expanded="true" />
           </folding>
